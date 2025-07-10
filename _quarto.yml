@@ -17,9 +17,13 @@ website:
         - index.qmd
         - section: "Posts"
           contents:
-            - posts/Iterative-Linear-Quadratic-Regulator-and-Differential-Dynamic-PRogramming.md
-            - posts/LPV-MPP-MCP-for-racing.qmd
-            - posts/MPC-for-Quadrotor.qmd
+            - posts/src/Iterative-Linear-Quadratic-Regulator-and-Differential-Dynamic-PRogramming.qmd
+            - posts/src/LPV-MPP-MCP-for-racing.qmd
+            - posts/src/Learning-MPC-for-Racing.qmd
+            - posts/src/Linear-Model-Predictive-Control.qmd
+            - posts/src/MPC-for-Quadrotor.qmd
+            - posts/src/Model-Predictive-Control-with-discrete-time-Control-Barrier-Functions.qmd
+            - posts/src/Nominal-Nonlinear-Model-Predictive-Control.qmd
 
 format:
   html:

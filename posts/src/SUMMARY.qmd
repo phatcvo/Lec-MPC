@@ -1,0 +1,6 @@
+# Summary
+
+- [Introduction](./Linear-Model-Predictive-Control.qmd)
+- [ROS 2](./Nominal-Nonlinear-Model-Predictive-Control.qmd)
+- [ROS Resources](./Iterative-Linear-Quadratic-Regulator-and-Differential-Dynamic-PRogramming.qmd)
+- [ROS Concepts and Design Patterns](./LPV-MPP-MCP-for-racing.qmd)

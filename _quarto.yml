@@ -1,0 +1,45 @@
+project:
+  type: website
+  title: "Lectures - Model Predictive Control"
+
+website:
+  title: "Lectures - Model Predictive Control"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: posts/
+        text: Posts
+  
+  sidebar:
+    - title: "Lectures"
+      contents:
+        - index.qmd
+        - section: "Posts"
+          contents:
+            - posts/Iterative-Linear-Quadratic-Regulator-and-Differential-Dynamic-PRogramming.md
+            - posts/LPV-MPP-MCP-for-racing.qmd
+            - posts/MPC-for-Quadrotor.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: assets/custom.scss
+    toc: true
+    toc-location: right
+    code-fold: true
+    code-tools: true
+    highlight-style: github
+    number-sections: false
+    reference-location: margin
+    citation-location: margin
+    bibliography: 
+      - assets/DeepLearning.bib
+      - assets/ReinforcementLearning.bib
+    csl: assets/apalike.csl
+
+execute:
+  freeze: auto
+  echo: false
+  warning: false
+  message: false

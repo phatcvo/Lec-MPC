@@ -5,7 +5,6 @@ tags: ["LQR"]
 categories: ["Motion Planning"]
 description: "iLQR/DDP algorithm for Non-linear trajectory optimization"
 draft: false
-math: true
 ---
 
 Differential Dynamic Programming (DDP) is an indirect method which optimizes over the unconstrained control-space. It uses a 2nd-order Taylor series approximation of the cost-to-go in Dynamic Programming (DP) to compute Newton steps on the control trajectory.
@@ -17,9 +16,8 @@ The iLQR/DDP controller solves the following finite-horizon optimization (Non-li
 
 $$
 \begin{aligned} 
-\min_{x_{1:N},u_{1:N-1}} \quad & \sum_{i=1}^{N-1} \bigg[ \frac{1}{2} (x_i - {x}_{ref})^TQ({x}_i - {x}_{ref}) + \frac{1}{2} u_i^TRu_i \bigg] + \frac{1}{2}(x_N- {x}_{ref})^TQ_f
-({x}_N- {x}_{ref})\\
-\text{st} \quad 
+\min_{x_{1:N},u_{1:N-1}} \quad & \sum_{i=1}^{N-1} \bigg[ \frac{1}{2} (x_i - x_{ref})^TQ(x_i - x_{ref}) + \frac{1}{2} u_i^TRu_i \bigg] + \frac{1}{2}(x_N- x_{ref})^TQ_f(x_N- x_{ref})\\
+\text{s.t.} \quad 
 & x_1 = x_{\text{IC}} \\
 & x_{i+1} = f(x_i, u_i)  \quad \text{for } i = 1,2,\ldots,N-1  
 \end{aligned}

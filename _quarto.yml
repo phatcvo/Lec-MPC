@@ -1,9 +1,14 @@
 project:
   type: website
   title: "Lectures - Model Predictive Control"
+  output-dir: _site
 
 website:
   title: "Lectures - Model Predictive Control"
+  description: "Lectures and tutorials on Model Predictive Control (MPC)"
+  site-url: https://phatcvo.github.io/Lec-MPC/
+  repo-url: https://github.com/phatcvo/Lec-MPC
+  repo-actions: [edit, issue]
   navbar:
     left:
       - href: index.qmd

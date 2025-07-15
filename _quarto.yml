@@ -42,6 +42,11 @@ format:
     number-sections: false
     reference-location: margin
     citation-location: margin
+    html-math-method: katex
+    include-in-header:
+      - text: |
+          <link rel="stylesheet" href="assets/katex/katex.min.css">
+          <script defer src="assets/katex/katex.min.js"></script>
     bibliography: 
       - assets/DeepLearning.bib
       - assets/ReinforcementLearning.bib

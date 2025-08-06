@@ -91,7 +91,7 @@ You can get a discrete-time mode with Forward Euler Discretization with sampling
 
 $$z(k+1) = z(k)+f(z(k),u(k))dt$$
 
-Using first-degree Tayer expansion around zbar and ubar
+Using first-degree Taylor expansion around zbar and ubar
 $$z(k+1) = z(k)+(f(\bar{z},\bar{u})+A'z(k)+B'u(k)-A'\bar{z}-B'\bar{u})dt$$
 
 $$z(k+1) = (I + dtA')z(k)+(dtB')u(k) + (f(\bar{z},\bar{u})-A'\bar{z}-B'\bar{u})dt$$
@@ -119,8 +119,9 @@ dt & 0 \\
 \end{bmatrix}$$
 
 
-$$ C = (f(\bar{z},\bar{u})-A'\bar{z}-B'\bar{u})dt \\
-= dt\left(\begin{bmatrix} 
+$$ C = (f(\bar{z},\bar{u})-A'\bar{z}-B'\bar{u})dt $$
+
+$$= dt\left(\begin{bmatrix} 
 \bar{v}\cos(\bar{\phi}) \\
 \bar{v}\sin(\bar{\phi}) \\
 \bar{a} \\
@@ -134,28 +135,28 @@ $$ C = (f(\bar{z},\bar{u})-A'\bar{z}-B'\bar{u})dt \\
 \end{bmatrix} -
 \begin{bmatrix} 0 \\ 0\\ \bar{a}\\
 \frac{\bar{v}\bar{\delta}}{L\cos^2(\bar{\delta})}
-\end{bmatrix}\right) =
-\begin{bmatrix} 
+\end{bmatrix}\right)$$
+
+$$= \begin{bmatrix} 
 \bar{v}\sin(\bar{\phi})\bar{\phi}dt\\
 -\bar{v}\cos(\bar{\phi})\bar{\phi}dt\\
 0\\
 -\frac{\bar{v}\bar{\delta}}{L\cos^2(\bar{\delta})}dt
-\end{bmatrix}
-$$
+\end{bmatrix}$$
 
 ## MPC approach:
 
 The cost function:
 $$
 \begin{aligned} 
-\min_{x_{1:N},u_{1:N-1}} \quad & \sum Q'(z(T,ref)-z(T))^2 + Q \sum ({z(t, ref) - z(t)})^2 + R \sum {u(t)}^2+ R' \sum({u(t+1)-u(t)})^2\\
+\min_{x_{1:N},u_{1:N-1}} \quad & Q'(z(T,ref)-z(T))^2 + Q \sum_{t=1}^{N-1} \|z(t, ref) - z(t)\|^2 + R \sum_{t=1}^{N-1} \|u(t)\|^2+ R' \sum_{t=1}^{N-2}\|u(t+1)-u(t)\|^2\\
 \text{s.t.} \quad 
-& z(t+1)=Az_t+Bu+C \\
-& z(0)=z(0, ob) \\
-& \underline{v} < v(t) < \overline{v}\\
-& \underline{u} < u(t) < \overline{u} \\
-& |u(t+1)-u(t)| < \Delta \overline{u} \\
-& |u(t)| < \overline{u}
+& z(t+1)=Az_t+Bu_t+C \\
+& z(0)=z(0, obs) \\
+& \underline{v} \leq v(t) \leq \overline{v}\\
+& \underline{u} \leq u(t) \leq \overline{u} \\
+& |u(t+1)-u(t)| \leq \Delta \overline{u} \\
+& |u(t)| \leq \overline{u}
 \end{aligned}
 $$
 

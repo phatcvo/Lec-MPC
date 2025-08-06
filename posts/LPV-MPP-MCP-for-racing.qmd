@@ -13,29 +13,40 @@ Particularly, here it is presented a collaborative work using optimal strategies
 All the algorithms are solved in real time employing the Operator Splitting Quadratic Program (OSQP) solver.
 
 ### The vehicle model
-The planning-control-estimation diagram is shown in the following figure
+The planning-control-estimation diagram shows the interconnection between:
 
+![ROS Graph](https://raw.githubusercontent.com/phatcvo/LPV-MPP-MPC-for-racing/main/ws/barc/src/images/rosgraph.png)
 
-![](https://raw.githubusercontent.com/phatcvo/LPV-MPP-MPC-for-racing/main/workspace/src/images/rosgraph.png)
+![System Diagram](https://raw.githubusercontent.com/phatcvo/LPV-MPP-MPC-for-racing/main/ws/barc/src/images/diagram.png)
 
-![](https://raw.githubusercontent.com/phatcvo/LPV-MPP-MPC-for-racing/main/workspace/src/images/diagram.png)
+- **Planning Module**: Generates optimal trajectory using LPV-MPC
+- **Control Module**: Tracks the planned trajectory  
+- **Estimation Module**: Provides state feedback
+
 ### LPV modeling
-The LPV paradigm allows to represent a given non-linear representation into a pseudo-linear form as
+The LPV (Linear Parameter-Varying) paradigm allows to represent a given non-linear representation into a pseudo-linear form:
 
-![](https://raw.githubusercontent.com/phatcvo/LPV-MPP-MPC-for-racing/main/workspace/src/images/modeling.png)
+![LPV Modeling](https://raw.githubusercontent.com/phatcvo/LPV-MPP-MPC-for-racing/main/ws/barc/src/images/modeling.png)
 
-### The vehicle model
-The model used in planning, control and estimation algorithms is the bicycle representation where the inputs are the front steering angle and the rear wheel linear acceleration
+This approach enables real-time optimization while maintaining the nonlinear vehicle dynamics characteristics.
 
-![](https://raw.githubusercontent.com/phatcvo/LPV-MPP-MPC-for-racing/main/workspace/src/images/variables_model.png)
+### The vehicle model  
+The model used in planning, control and estimation algorithms is the bicycle representation where the inputs are:
+
+![Vehicle Model Variables](https://raw.githubusercontent.com/phatcvo/LPV-MPP-MPC-for-racing/main/ws/barc/src/images/variables_model.png)
+
+- **Front steering angle** (δ): Controls the lateral motion
+- **Rear wheel linear acceleration** (a): Controls the longitudinal motion
+
+The bicycle model captures the essential vehicle dynamics while remaining computationally efficient for real-time MPC implementation.
 
 
 ### MPC for planning
-The trajectory planning for racing is solved using the MPC technique. The cost function adresses the lap time minimization as well as the smothness of the lateral motion by reducing as much as possible the understeer and oversteer behaviours.
+The trajectory planning for racing is solved using the MPC technique. The cost function addresses the lap time minimization as well as the smoothness of the lateral motion by reducing as much as possible the understeer and oversteer behaviours.
 This algorithm is launched every 33 ms.
 
 ### MPC for control
-At this point an MPC is built and solved at every control iteration (33 ms) for figure out the optimal control actions (steering and rear wheel acceleration).
+At this point an MPC is built and solved at every control iteration (33 ms) to figure out the optimal control actions (steering and rear wheel acceleration).
 
 
 ### Test
@@ -50,7 +61,9 @@ source devel/setup.bash
 roslaunch barc MAIN_LAUNCH.launch
 ```
 
-![](https://raw.githubusercontent.com/phatcvo/LPV-MPP-MPC-for-racing/main/workspace/src/images/Kazam_screenshot_00000.png)
+![Kazam Screenshot](https://raw.githubusercontent.com/phatcvo/LPV-MPP-MPC-for-racing/main/ws/barc/src/images/Kazam_screenshot_00000.png)
+
+*Note: This project demonstrates the LPV-MPC approach for autonomous racing vehicles with real-time trajectory planning and control.*
 
 ## References
 * Trajectory planner presented in:  Alcala, E., Puig, V. & Quevedo, J. (2019). LPV-MP Planning for Autonomous Racing Vehicles considering Obstacles. Robotics and Autonomous Systems.

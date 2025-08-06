@@ -12,13 +12,13 @@ The MPC-CBF optimization problem is given by:
 
 
 $$\begin{aligned}
-\min_{u_{t: t+N-1 \mid t}} \quad & \frac{1}{2} \tilde{x}_N^T Q_x \tilde{x}_N+\sum_{k=0}^{N-1} \frac{1}{2} \tilde{x}_k^T Q_x \tilde{x}_k+\frac{1}{2} u_k^T Q_u u_k\\
+\min_{u_{t:t+N-1|t}} \quad & \frac{1}{2} \tilde{x}_N^T Q_x \tilde{x}_N+\sum_{k=0}^{N-1} \frac{1}{2} \tilde{x}_k^T Q_x \tilde{x}_k+\frac{1}{2} u_k^T Q_u u_k\\
 \textrm{s.t.} \quad 
- & x_{t+k+1 \mid t}=x_{t+k \mid t}+f\left(x_{t+k \mid t}, u_{t+k \mid t}\right) \cdot T_s, \quad k=0, . ., N-1,\\
- & x_{\min } \leq x_{t+k \mid t} \leq x_{\max }, \quad k=0, \ldots, N-1,\\
- & u_{\min } \leq u_{t+k \mid t} \leq u_{\max }, \quad k=0, \ldots, N-1,   \\
- & x_{t \mid t}=x_t,   \\
- & \Delta h\left(x_{t+k \mid t}, u_{t+k \mid t}\right) \geq-\gamma h\left(x_{t+k \mid t}\right), \quad k=0, \ldots, N-1 \\
+ & x_{t+k+1|t}=x_{t+k|t}+f\left(x_{t+k|t}, u_{t+k|t}\right) \cdot T_s, \quad k=0, \ldots, N-1,\\
+ & x_{\min} \leq x_{t+k|t} \leq x_{\max}, \quad k=0, \ldots, N-1,\\
+ & u_{\min} \leq u_{t+k|t} \leq u_{\max}, \quad k=0, \ldots, N-1,   \\
+ & x_{t|t}=x_t,   \\
+ & \Delta h\left(x_{t+k|t}, u_{t+k|t}\right) \geq-\gamma h\left(x_{t+k|t}\right), \quad k=0, \ldots, N-1 \\
 \end{aligned}$$
 
 

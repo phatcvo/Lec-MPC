@@ -30,7 +30,7 @@ Results
 
 ### Scenario 1
 ![](https://raw.githubusercontent.com/phatcvo/MPC-CBF/main/images/Display/path_comparisons.png)
-![](https://raw.githubusercontent.com/phatcvo/MPC-CBF/main/Display/path_scenario1.png)
+![](https://raw.githubusercontent.com/phatcvo/MPC-CBF/main/images/Display/path_scenario1.png)
 ![](https://raw.githubusercontent.com/phatcvo/MPC-CBF/main/images/Display/trajectories_animation_scenario1.gif)
 
 

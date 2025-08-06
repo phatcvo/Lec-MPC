@@ -148,8 +148,8 @@ $$
 The cost function:
 $$
 \begin{aligned} 
-\min\_{x_{1:N},u_{1:N-1}} \quad & \sum Q'(z(T,ref)-z(T))^2 + Q \Sigma ({z(t, ref) - z(t)})^2 + R \Sigma {u(t)}^2+ R' \Sigma({u(t+1)-u(t)})^2\\
-\text{st} \quad 
+\min_{x_{1:N},u_{1:N-1}} \quad & \sum Q'(z(T,ref)-z(T))^2 + Q \sum ({z(t, ref) - z(t)})^2 + R \sum {u(t)}^2+ R' \sum({u(t+1)-u(t)})^2\\
+\text{s.t.} \quad 
 & z(t+1)=Az_t+Bu+C \\
 & z(0)=z(0, ob) \\
 & \underline{v} < v(t) < \overline{v}\\

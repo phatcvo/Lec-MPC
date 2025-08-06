@@ -16,8 +16,7 @@ All the algorithms are solved in real time employing the Operator Splitting Quad
 The planning-control-estimation diagram is shown in the following figure
 
 
-![](https://raw.githubusercontent.com/phatcvo/LPV-MPP-MPC-for-racing/main/workspace/src/images/rosgraph.png
-)
+![](https://raw.githubusercontent.com/phatcvo/LPV-MPP-MPC-for-racing/main/workspace/src/images/rosgraph.png)
 
 ![](https://raw.githubusercontent.com/phatcvo/LPV-MPP-MPC-for-racing/main/workspace/src/images/diagram.png)
 ### LPV modeling
@@ -42,7 +41,7 @@ At this point an MPC is built and solved at every control iteration (33 ms) for 
 ### Test
 To use this project, install it locally via:
 ```
-git clone https://github.com/phatcvo/Quadrotor-MPC.git
+git clone https://github.com/phatcvo/LPV-MPP-MPC-for-racing.git
 ```
 To execute the code, run:
 ```

@@ -72,7 +72,7 @@ table_lecture(lecs)
 
 ```{python} 
 lecs = {
-    'Iterative-Linear-Quadratic-Regulator-and-Differential-Dynamic-PRogramming': """**iLQR/DDP Algorithm for Nonlinear Trajectory Optimization**\\
+    'Iterative-Linear-Quadratic-Regulator-and-Differential-Dynamic-Programming': """**iLQR/DDP Algorithm for Nonlinear Trajectory Optimization**\\
 Iterative Linear Quadratic Regulator and Differential Dynamic Programming for nonlinear optimal control.""",
 }
 table_lecture(lecs)

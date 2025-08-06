@@ -149,10 +149,10 @@ $$= \begin{bmatrix}
 The cost function:
 $$
 \begin{aligned} 
-\min_{x_{1:N},u_{1:N-1}} \quad & Q'(z(T,ref)-z(T))^2 + Q \sum_{t=1}^{N-1} \|z(t, ref) - z(t)\|^2 + R \sum_{t=1}^{N-1} \|u(t)\|^2+ R' \sum_{t=1}^{N-2}\|u(t+1)-u(t)\|^2\\
+\min_{z_{1:N},u_{1:N-1}} \quad & Q'(z(N,ref)-z(N))^2 + Q \sum_{t=1}^{N-1} \|z(t, ref) - z(t)\|^2 + R \sum_{t=1}^{N-1} \|u(t)\|^2+ R' \sum_{t=1}^{N-2}\|u(t+1)-u(t)\|^2\\
 \text{s.t.} \quad 
-& z(t+1)=Az_t+Bu_t+C \\
-& z(0)=z(0, obs) \\
+& z(t+1)=Az(t)+Bu(t)+C \\
+& z(1)=z(0, obs) \\
 & \underline{v} \leq v(t) \leq \overline{v}\\
 & \underline{u} \leq u(t) \leq \overline{u} \\
 & |u(t+1)-u(t)| \leq \Delta \overline{u} \\

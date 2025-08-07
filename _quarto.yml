@@ -13,7 +13,7 @@ website:
     left:
       - href: https://phatcvo.github.io/
         text: Home
-      - href: posts/
+      - href: https://phatcvo.github.io/Lec-MPC/
         text: Posts
   
   sidebar:

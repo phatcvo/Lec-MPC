@@ -5,7 +5,6 @@ tags: ["MPC", "racing"]
 categories: ["Motion Planning"]
 description: "Linear Parameter-Varying - Model Predictive Control for Racing"
 draft: false
-math: true
 ---
 
 Planning and control for autonomous racing vehicles. This project allows you to solve the autonomous racing driving problem using advanced control theory. 
@@ -15,9 +14,9 @@ All the algorithms are solved in real time employing the Operator Splitting Quad
 ### The vehicle model
 The planning-control-estimation diagram shows the interconnection between:
 
-![ROS Graph](https://raw.githubusercontent.com/phatcvo/LPV-MPP-MPC-for-racing/main/ws/barc/src/images/rosgraph.png)
+![ROS Graph](https://raw.githubusercontent.com/phatcvo/LPV-MPP-MPC-for-racing/main/ws/images/rosgraph.png)
 
-![System Diagram](https://raw.githubusercontent.com/phatcvo/LPV-MPP-MPC-for-racing/main/ws/barc/src/images/diagram.png)
+![System Diagram](https://raw.githubusercontent.com/phatcvo/LPV-MPP-MPC-for-racing/main/ws/images/diagram.png)
 
 - **Planning Module**: Generates optimal trajectory using LPV-MPC
 - **Control Module**: Tracks the planned trajectory  
@@ -26,14 +25,14 @@ The planning-control-estimation diagram shows the interconnection between:
 ### LPV modeling
 The LPV (Linear Parameter-Varying) paradigm allows to represent a given non-linear representation into a pseudo-linear form:
 
-![LPV Modeling](https://raw.githubusercontent.com/phatcvo/LPV-MPP-MPC-for-racing/main/ws/barc/src/images/modeling.png)
+![LPV Modeling](https://raw.githubusercontent.com/phatcvo/LPV-MPP-MPC-for-racing/main/ws/images/modeling.png)
 
 This approach enables real-time optimization while maintaining the nonlinear vehicle dynamics characteristics.
 
 ### The vehicle model  
 The model used in planning, control and estimation algorithms is the bicycle representation where the inputs are:
 
-![Vehicle Model Variables](https://raw.githubusercontent.com/phatcvo/LPV-MPP-MPC-for-racing/main/ws/barc/src/images/variables_model.png)
+![Vehicle Model Variables](https://raw.githubusercontent.com/phatcvo/LPV-MPP-MPC-for-racing/main/ws/images/variables_model.png)
 
 - **Front steering angle** (δ): Controls the lateral motion
 - **Rear wheel linear acceleration** (a): Controls the longitudinal motion
@@ -61,7 +60,7 @@ source devel/setup.bash
 roslaunch barc MAIN_LAUNCH.launch
 ```
 
-![Kazam Screenshot](https://raw.githubusercontent.com/phatcvo/LPV-MPP-MPC-for-racing/main/ws/barc/src/images/Kazam_screenshot_00000.png)
+![Kazam Screenshot](https://raw.githubusercontent.com/phatcvo/LPV-MPP-MPC-for-racing/main/ws/images/Kazam_screenshot_00000.png)
 
 *Note: This project demonstrates the LPV-MPC approach for autonomous racing vehicles with real-time trajectory planning and control.*
 

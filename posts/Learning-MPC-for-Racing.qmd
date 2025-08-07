@@ -5,7 +5,6 @@ tags: ["racing", "MPC"]
 categories: ["Motion Planning"]
 description: "Learning Model Predictive Control for autonomous racing."
 draft: false
-math: true
 ---
 
 

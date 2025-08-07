@@ -1,0 +1,168 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: Lectures - Model Predictive Control\n",
+        "echo: false\n",
+        "---\n",
+        "\n",
+        "\n",
+        "## Lectures on Model Predictive Control\n",
+        "\n",
+        "#### Fundamentals\n"
+      ],
+      "id": "53f573be"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from IPython.display import Markdown\n",
+        "\n",
+        "def table_lecture(lectures):\n",
+        "    # header\n",
+        "    text = \"\"\"\n",
+        "|          | Details |\n",
+        "|----------|--------|\"\"\"\n",
+        "\n",
+        "    # fields\n",
+        "    for key, desc in lectures.items():\n",
+        "        text += f\"\"\"\n",
+        "| {desc}  | [Book](posts/{key}.html){{target=\"_blank\"}} |\"\"\"\n",
+        "\n",
+        "    # finish\n",
+        "    text += \"\"\"\n",
+        ": {tbl-colwidths=\"[80, 20]\"}\n",
+        "\"\"\"\n",
+        "\n",
+        "    return Markdown(text)"
+      ],
+      "id": "ae8ea897",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "lecs = {\n",
+        "    'Linear-Model-Predictive-Control': \"\"\"**Linear Model Predictive Control**\\\\\n",
+        "The MPC controller controls vehicle speed and steering based on linearized model.\"\"\",\n",
+        "    'Nominal-Nonlinear-Model-Predictive-Control': \"\"\"**Nominal Nonlinear Model Predictive Control**\\\\\n",
+        "Nonlinear model predictive control (NMPC) for multivariable control problems with process constraints.\"\"\",\n",
+        "}\n",
+        "table_lecture(lecs)"
+      ],
+      "id": "fc9b585e",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "#### Advanced MPC Methods"
+      ],
+      "id": "7093dc92"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "lecs = {\n",
+        "    'Learning-MPC-for-Racing': \"\"\"**Learning Model Predictive Control for Autonomous Racing**\\\\\n",
+        "Data-driven control framework that learns from experience to drive faster on race tracks.\"\"\",\n",
+        "    'LPV-MPP-MCP-for-racing': \"\"\"**LPV Model Predictive Control for Racing**\\\\\n",
+        "Linear Parameter Varying (LPV) MPC approach for high-performance autonomous racing.\"\"\",\n",
+        "}\n",
+        "table_lecture(lecs)"
+      ],
+      "id": "b69a7bb9",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "#### Applications"
+      ],
+      "id": "fed9a408"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "lecs = {\n",
+        "    'MPC-for-Quadrotor': \"\"\"**Trajectory Tracking with Quadrotor by LMPC**\\\\\n",
+        "Learning Model Predictive Control for trajectory tracking with quadrotor systems.\"\"\",\n",
+        "    'Model-Predictive-Control-with-discrete-time-Control-Barrier-Functions': \"\"\"**MPC with Discrete-time Control Barrier Functions**\\\\\n",
+        "Integration of safety constraints through Control Barrier Functions in MPC formulations.\"\"\",\n",
+        "}\n",
+        "table_lecture(lecs)"
+      ],
+      "id": "f169052f",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "#### Related Optimization Methods"
+      ],
+      "id": "aafc0638"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "lecs = {\n",
+        "    'Iterative-Linear-Quadratic-Regulator-and-Differential-Dynamic-Programming': \"\"\"**iLQR/DDP Algorithm for Nonlinear Trajectory Optimization**\\\\\n",
+        "Iterative Linear Quadratic Regulator and Differential Dynamic Programming for nonlinear optimal control.\"\"\",\n",
+        "}\n",
+        "table_lecture(lecs)"
+      ],
+      "id": "948cfd31",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Recommended Readings\n",
+        "\n",
+        "* Jan Maciejowski (2002). Predictive Control with Constraints. Prentice Hall.\n",
+        "\n",
+        "* Manfred Morari and Jay H. Lee (1999). Model predictive control: past, present and future. Computers & Chemical Engineering.\n",
+        "\n",
+        "* James B. Rawlings, David Q. Mayne, and Moritz M. Diehl (2017). Model Predictive Control: Theory, Computation, and Design. Nob Hill Publishing.\n",
+        "\n",
+        "* Eduardo F. Camacho and Carlos Bordons (2007). Model Predictive Control. Springer-Verlag.\n",
+        "\n",
+        "* Model Predictive Control course materials and tutorials:\n",
+        "\n",
+        "<https://web.stanford.edu/class/ee364b/>\n",
+        "\n",
+        "<https://www.mpc.berkeley.edu/>\n",
+        "\n",
+        "<https://www.do-mpc.com/en/latest/>"
+      ],
+      "id": "545a73bd"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "/home/phat/.local/share/jupyter/kernels/python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

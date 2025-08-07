@@ -5,7 +5,6 @@ tags: ["MPC"]
 categories: ["Motion Tracking"]
 description: "Trajectory tracking with a quadrotor by LMPC."
 draft: false
-math: true
 ---
 
 The non-linear dynamics are linearized about a linearization trajectory $\bar{x}, \bar{u}$ while the quadrotor aims to track a different reference trajectory 

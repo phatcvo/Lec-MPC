@@ -5,7 +5,6 @@ tags: ["Model", "MPC"]
 categories: ["Motion Planning"]
 description: "The MPC controller controls vehicle speed and steering based on linearized model."
 draft: false
-math: true
 ---
 
 ## Vehicle model linearization

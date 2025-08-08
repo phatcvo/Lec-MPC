@@ -11,14 +11,46 @@ website:
   repo-actions: [edit, issue]
   navbar:
     left:
-      - href: https://phatcvo.github.io/
-        text: Main Site
-      - href: https://phatcvo.github.io/Lec-MPC/
-        text: Course Home
-      - href: https://phatcvo.github.io/Lec-DRL/
-        text: Deep RL
-      - href: https://phatcvo.github.io/Safe-Optimal-Control/
-        text: Safe-Optimal
+      - text: Main Site
+        href: https://phatcvo.github.io/
+      - text: Courses
+        menu:
+          - text: Deep RL
+            href: https://phatcvo.github.io/Lec-DRL/
+          - text: MPC
+            href: https://phatcvo.github.io/Lec-MPC/
+          - text: Safe-Optimal
+            href: https://phatcvo.github.io/Safe-Optimal-Control/
+      - text: Course
+        menu:
+          - text: Course Home
+            href: index.qmd
+          - text: Posts Index
+            href: index.qmd#lectures
+          - text: "---"
+          - text: Core Topics
+          - text: Linear MPC
+            href: posts/Linear-Model-Predictive-Control.qmd
+          - text: Nonlinear MPC
+            href: posts/Nominal-Nonlinear-Model-Predictive-Control.qmd
+          - text: iLQR & DDP
+            href: posts/Iterative-Linear-Quadratic-Regulator-and-Differential-Dynamic-PRogramming.qmd
+          - text: CBF Integration
+            href: posts/Model-Predictive-Control-with-discrete-time-Control-Barrier-Functions.qmd
+          - text: Quadrotor MPC
+            href: posts/MPC-for-Quadrotor.qmd
+      - text: Resources
+        menu:
+          - text: GitHub Repo
+            href: https://github.com/phatcvo/Lec-MPC
+          - text: Deep RL Course
+            href: https://phatcvo.github.io/Lec-DRL/
+          - text: Safe-Optimal Survey
+            href: https://phatcvo.github.io/Safe-Optimal-Control/
+    right:
+      - icon: github
+        href: https://github.com/phatcvo/Lec-MPC
+        aria-label: GitHub
   
   sidebar:
     - title: "Lectures"
@@ -37,9 +69,9 @@ website:
 format:
   html:
     theme:
-      - cosmo
-      - assets/theme-sync.scss
-    css: assets/custom.scss
+      light: cosmo
+      dark: cosmo
+    css: [assets/theme-sync.scss, assets/custom.scss]
     toc: true
     toc-location: right
     code-fold: true

@@ -12,9 +12,13 @@ website:
   navbar:
     left:
       - href: https://phatcvo.github.io/
-        text: Home
+        text: Main Site
       - href: https://phatcvo.github.io/Lec-MPC/
-        text: Posts
+        text: Course Home
+      - href: https://phatcvo.github.io/Lec-DRL/
+        text: Deep RL
+      - href: https://phatcvo.github.io/Safe-Optimal-Control/
+        text: Safe-Optimal
   
   sidebar:
     - title: "Lectures"
@@ -32,7 +36,9 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme:
+      - cosmo
+      - assets/theme-sync.scss
     css: assets/custom.scss
     toc: true
     toc-location: right
